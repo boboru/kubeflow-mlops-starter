@@ -1,0 +1,21 @@
+{"inputs": [
+    {
+        "userid": ["884208"],
+        "cms_segid": ["33"],
+        "cms_group_id": ["4"],
+        "final_gender_code": ["2"],
+        "age_level": ["4"],
+        "pvalue_level": ["3"],
+        "shopping_level": ["3"],
+        "occupation": ["2"],
+        "new_user_class_level": ["2"],
+        "adgroup_id": ["652419"],
+        "cate_id": ["1155"],
+        "campaign_id": ["384153"],
+        "customer": ["37757"],
+        "brand": ["255616"],
+        "pid": ["1"],
+        "btag": ["1"],
+        "price": [0.1474]
+    }
+]}

@@ -1,0 +1,35 @@
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: dcnv2
+  namespace: kubeflow-user-example-com
+  annotations:
+    sidecar.istio.io/inject: "false"
+spec:
+  predictor:
+    scaleTarget: 1
+    scaleMetric: concurrency
+    maxReplicas: 10
+    containers:
+      - name: kserve-container
+        image: boboru/dcnv2:v1
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "512Mi"
+          limits:
+            cpu: "1"
+            memory: "1Gi"
+        env:
+          - name: PROTOCOL
+            value: v2
+          - name: MODEL_PATH
+            value: /mnt/models/model_weights.pth
+          - name: ENCODER_PATH
+            value: /mnt/models/preprocess_metadata.pkl
+          - name: DENSE_COLS
+            value: price
+          - name: SPARSE_COLS
+            value: userid,cms_segid,cms_group_id,final_gender_code,age_level,pvalue_level,shopping_level,occupation,new_user_class_level,adgroup_id,cate_id,campaign_id,customer,brand,pid,btag
+          - name: STORAGE_URI
+            value: pvc://torch-workspace
