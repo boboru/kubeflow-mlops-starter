@@ -91,9 +91,9 @@ Pytorch DDP pods:
 
 
 
-### Step 3: Define Custome Model
+### Step 3: Define Custom Model
 
-We will use `serve.py` to create and deploy an inference server to Kubernetes. This is a custome predictor implemented using KServe API.
+We will use `serve.py` to create and deploy an inference server to Kubernetes. This is a custom predictor implemented using KServe API.
 
 > seems that KServe migrates TorchServe to Triton TorchScript backend recently... 
 
