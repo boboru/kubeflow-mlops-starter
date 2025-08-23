@@ -160,7 +160,7 @@ Deploy it:
 kubectl apply -f serve.yaml
 ```
 
-### Step 4: Test Inference Service
+### Step 5: Test Inference Service
 
 #### Out-of-cluster
 After deployment, test the service locally via `port-forward`.
@@ -206,7 +206,7 @@ Since we are in the cluster, the JWT token can be ignored. Also, internval servi
 
 Visit `inference.ipynb` and excute it in the cluster for more exmaples.
     
-### Step 5 (Optional): Autoscaling
+### Step 6 (Optional): Autoscaling
 
 With the Knative Pod Autoscaler configured in `serve.yaml`, you can load test the service using [hey](https://github.com/rakyll/hey).
 
